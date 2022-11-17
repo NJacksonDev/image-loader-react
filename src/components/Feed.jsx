@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "antd";
 import UploadModal from "./UploadModal";
+import Post from "./Post"
 
 export default function Feed() {
   const [photoList, setPhotoList] = useState();
   const [showUpload, setShowUpload] = useState(false);
   useEffect(() => {
-    fetch("https://express-ts-c8.web.app/photos")
+    fetch("https://express-ts-nj.web.app/photos")
       // fetch('http://localhost:5002/photos')
       .then((results) => results.json())
       .then((data) => setPhotoList(data))
@@ -14,8 +15,13 @@ export default function Feed() {
   }, [setPhotoList]);
   return (
     <section>
-      {!photoList ? <p>Loading...</p> : <p>{photoList.length}</p>}
-      {showUpload ? (
+      {!photoList 
+      ? <p>Loading...</p> 
+      : photoList.map(post => (
+        <Post post = {post} key={post.photoId}/> //this photoId reference is taken from the back end
+      ))    
+      }  
+        {showUpload ? (
         <UploadModal
           setPhotoList={setPhotoList}
           setShowUpload={setShowUpload}
