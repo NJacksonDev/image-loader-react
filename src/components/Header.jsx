@@ -1,3 +1,3 @@
 export default function Header() {
-  return <header>IG Clone</header>;
+  return <header>Photo Uploader App</header>;
 }

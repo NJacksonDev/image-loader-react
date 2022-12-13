@@ -14,21 +14,16 @@ const firebaseConfig = {
 export default function UploadModal({ setShowUpload, setPhotoList }) {
   const handleNewPhoto = (values) => {
     console.log(values);
-    // 0. Connect to firebase storage
     const app = initializeApp(firebaseConfig);
     const storage = getStorage(app);
-    // 1. Upload photo to storage bucket
     const filename = values.photo.file.name;
     const imageRef = ref(storage, `photos/${filename}`);
     uploadBytes(imageRef, values.photo.file.originFileObj)
       .then(() => console.log("upload successful"))
       .catch((err) => console.error(err));
-    // 2. figure out URL for that photo
     const photoUrl = `https://firebasestorage.googleapis.com/v0/b/upload-storage-nj.appspot.com/o/photos%2F${filename}?alt=media`;
-    // 3. put that URL in to new photo object
     let newPhotoObj = values;
     newPhotoObj.photo = photoUrl;
-    // 4. send a post request to API
     fetch("https://express-ts-nj.web.app/photos", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -36,9 +31,7 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
     })
       .then((results) => results.json())
       .then((newListOfPhotos) => {
-        // 5. get back new list of photos
         setPhotoList(newListOfPhotos);
-        // 6. setPhotoList and close Modal
         closeModal();
       })
       .catch(alert);

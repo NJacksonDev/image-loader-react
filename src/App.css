@@ -3,14 +3,28 @@
 }
 
 header {
+  background-color: #fad2e5b8;
+  z-index: 1;
   padding: 1em;
   border-bottom: 1px solid grey;
   width: 100vw;
   position: fixed;
+  font-size:x-large;
 }
 
+.photo-feed {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.ant-card {
+  margin-bottom: 32px;
+}
+
+
+
 .App-header {
-  background-color: rgb(255, 255, 255);
+  background-color: lightblue;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
