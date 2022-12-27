@@ -38,7 +38,7 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
   };
   const closeModal = () => setShowUpload(false);
   return (
-    <Modal title="Upload Photo" open={true} footer={null} onCancel={closeModal}>
+    <Modal title="Upload Image" open={true} footer={null} onCancel={closeModal}>
       <Form
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
@@ -47,9 +47,9 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
         <Form.Item label="User Name" name="username">
           <Input required />
         </Form.Item>
-        <Form.Item label="Profile Picture URL" name="profilePic">
-          <Input required />
-        </Form.Item>
+        {/* <Form.Item label="Profile Picture URL" name="profilePic">
+          {/* <Input required /> */}
+        {/* </Form.Item> */}
         <Form.Item label="Photo" name="photo">
           <Upload listType="picture-card">
             +<br />
@@ -61,7 +61,7 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
         </Form.Item>
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
-            Save Photo
+            Upload Image
           </Button>
         </Form.Item>
       </Form>

@@ -1,4 +1,4 @@
-# Photo Uploader
+# Image Loader
 
 ## Available Scripts
 

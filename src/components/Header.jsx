@@ -1,3 +1,3 @@
 export default function Header() {
-  return <header>Photo Uploader App</header>;
+  return <header>Image Loader</header>;
 }
