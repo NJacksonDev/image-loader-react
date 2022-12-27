@@ -24,7 +24,7 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
     const photoUrl = `https://firebasestorage.googleapis.com/v0/b/upload-storage-nj.appspot.com/o/photos%2F${filename}?alt=media`;
     let newPhotoObj = values;
     newPhotoObj.photo = photoUrl;
-    fetch("https://express-ts-nj.web.app/photos", {
+    fetch(`${process.env.REACT_APP_ENDPOINT}/photos`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newPhotoObj),

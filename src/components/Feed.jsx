@@ -7,8 +7,7 @@ export default function Feed() {
   const [photoList, setPhotoList] = useState();
   const [showUpload, setShowUpload] = useState(false);
   useEffect(() => {
-    fetch("https://express-ts-nj.web.app/photos")
-      // fetch('http://localhost:5002/photos')
+    fetch(`${process.env.REACT_APP_ENDPOINT}/photos`)
       .then((results) => results.json())
       .then((data) => setPhotoList(data))
       .catch(alert);
