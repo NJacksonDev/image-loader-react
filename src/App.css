@@ -2,14 +2,26 @@
   text-align: center;
 }
 
-header {
-  background-color: #fad2e5b8;
+body {
+  background-color: grey;
+}
+
+.header {
+  background-color: whitesmoke;
   z-index: 1;
   padding: 1em;
-  border-bottom: 1px solid grey;
+  border-bottom: 2px solid grey;
   width: 100vw;
   position: fixed;
   font-size: x-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-header {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .photo-feed {
@@ -22,7 +34,6 @@ header {
 }
 
 .App-header {
-  background-color: lightblue;
   min-height: 80vh;
   display: flex;
   flex-direction: column;

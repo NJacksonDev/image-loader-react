@@ -1,11 +1,11 @@
 import { Button } from "antd";
 
-
-export default function Logout({setUser}) {
+export default function Logout({ setUser }) {
   return (
-    <Button onClick={() => setUser(null)}
-    type="primary"
-    size="large"
-    >Logout</Button>
-  )
+    <div>
+      <Button onClick={() => setUser(null)} type="primary" size="large">
+        Logout
+      </Button>
+    </div>
+  );
 }

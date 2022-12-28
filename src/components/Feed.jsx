@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "antd";
 import UploadModal from "./UploadModal";
+import Header from "./Header";
 import Post from "./Post";
 
-export default function Feed() {
+export default function Feed({ setUser }) {
   const [photoList, setPhotoList] = useState();
   const [showUpload, setShowUpload] = useState(false);
   useEffect(() => {
@@ -14,6 +15,7 @@ export default function Feed() {
   }, [setPhotoList]);
   return (
     <section className="photo-feed">
+      <Header setUser={setUser} />
       {!photoList ? (
         <p>Loading...</p>
       ) : (
