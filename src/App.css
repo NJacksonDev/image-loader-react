@@ -70,5 +70,6 @@
 
 .fab {
   position: fixed;
-  bottom: 50px;
+  bottom: 60px;
+  right: 75px;
 }
