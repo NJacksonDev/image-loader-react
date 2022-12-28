@@ -2,7 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 import { Modal, Form, Input, Button, Upload, Select } from "antd";
 import fox from "./avatars/fox.jpg";
-import bear from "./avatars/bear.jpg";
 import cat from "./avatars/cat.jpg";
 import raccoon from "./avatars/raccoon.jpg";
 import zebra from "./avatars/zebra.jpg";
@@ -58,7 +57,6 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
             <Select.Option value={fox}>Fox</Select.Option>
             <Select.Option value={cat}>Cat</Select.Option>
             <Select.Option value={panda}>Panda</Select.Option>
-            <Select.Option value={bear}>Bear</Select.Option>
             <Select.Option value={raccoon}>Raccoon</Select.Option>
             <Select.Option value={zebra}>Zebra</Select.Option>
           </Select>
