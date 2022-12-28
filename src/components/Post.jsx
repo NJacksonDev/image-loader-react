@@ -32,7 +32,7 @@ export default function Post({ post, setPhotoList }) {
     >
       <Card.Meta
         className="card-meta"
-        avatar={<Avatar src={post.avatar} />}
+        avatar={<Avatar src={post.avatar} size="large" />}
         title={post.username}
         description={post.description}
       />

@@ -1,6 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 import { Modal, Form, Input, Button, Upload, Select } from "antd";
+import fox from "./avatars/fox.jpg";
+import bear from "./avatars/bear.jpg";
+import cat from "./avatars/cat.jpg";
+import raccoon from "./avatars/raccoon.jpg";
+import zebra from "./avatars/zebra.jpg";
+import panda from "./avatars/panda.jpg";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBcm7LwmgXHX-2LnWzaybUzuUy1GsjN5l8",
@@ -47,13 +53,14 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
         <Form.Item label="User Name" name="username">
           <Input required />
         </Form.Item>
-        <Form.Item label="Avatar">
-          <Select name="avatar">
-            <Select.Option value="./Bear-avatar.jpg">Bear</Select.Option>
-            <Select.Option value="🦊">Fox → 🦊</Select.Option>
-            <Select.Option value="🐨">Koala → 🐨</Select.Option>
-            <Select.Option value="🐸">Frog → 🐸</Select.Option>
-            <Select.Option value="🦁">Lion → 🦁</Select.Option>
+        <Form.Item label="Avatar" name="avatar">
+          <Select>
+            <Select.Option value={fox}>Fox</Select.Option>
+            <Select.Option value={cat}>Cat</Select.Option>
+            <Select.Option value={panda}>Panda</Select.Option>
+            <Select.Option value={bear}>Bear</Select.Option>
+            <Select.Option value={raccoon}>Raccoon</Select.Option>
+            <Select.Option value={zebra}>Zebra</Select.Option>
           </Select>
         </Form.Item>
         <Form.Item label="Photo" name="photo">
