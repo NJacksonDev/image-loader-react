@@ -31,6 +31,7 @@ export default function Post({ post, setPhotoList }) {
       cover={<img alt={post.description} src={post.photo} />}
     >
       <Card.Meta
+        className="card-meta"
         avatar={<Avatar src={post.avatar} />}
         title={post.username}
         description={post.description}

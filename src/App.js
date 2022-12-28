@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header";
 import Feed from "./components/Feed";
 import Login from "./components/Login";
 import { useState } from "react";

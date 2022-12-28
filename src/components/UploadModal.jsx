@@ -47,9 +47,9 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
         <Form.Item label="User Name" name="username">
           <Input required />
         </Form.Item>
-        <Form.Item label="Avatar" name="avatar">
-          <Select>
-            <Select.Option value="🐬">Dolphin → 🐬</Select.Option>
+        <Form.Item label="Avatar">
+          <Select name="avatar">
+            <Select.Option value="./Bear-avatar.jpg">Bear</Select.Option>
             <Select.Option value="🦊">Fox → 🦊</Select.Option>
             <Select.Option value="🐨">Koala → 🐨</Select.Option>
             <Select.Option value="🐸">Frog → 🐸</Select.Option>
