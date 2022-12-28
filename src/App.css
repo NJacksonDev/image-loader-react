@@ -11,7 +11,7 @@ body {
   z-index: 1;
   padding-top: 0.5em;
   padding-left: 1em;
-  padding-right: 1.5em;
+  padding-right: 1em;
   padding-bottom: 0.5em;
   width: 100vw;
   position: fixed;
@@ -22,11 +22,6 @@ body {
   display: flex;
   justify-content: end;
 }
-
-/* .photo-feed {
-  margin-top: 60px;
-  margin-bottom: 60px;
-} */
 
 .ant-card {
   margin-bottom: 32px;
