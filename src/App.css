@@ -7,27 +7,26 @@ body {
 }
 
 .header {
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
-  padding: 1em;
-  border-bottom: 2px solid grey;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1.5em;
+  padding-bottom: 0.5em;
   width: 100vw;
   position: fixed;
   font-size: x-large;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.selected-header {
+.logout {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
 }
 
-.photo-feed {
+/* .photo-feed {
   margin-top: 60px;
   margin-bottom: 60px;
-}
+} */
 
 .ant-card {
   margin-bottom: 32px;
@@ -36,11 +35,11 @@ body {
 .App-header {
   min-height: 80vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(37, 35, 35);
+  color: rgb(189, 29, 109);
+  font-weight: 700;
 }
 
 .App-link {
