@@ -20,10 +20,12 @@ export default function Login({ setUser }) {
     setUser(response.user);
   };
   return (
-    <>
+    <div className="login">
+      <h4 className="login-text">Image Loader</h4>
+      <h5 className="login-text">Upload your favorite images with ease.</h5>
       <Button onClick={handleGoogleLogin} type="primary">
         Sign in with Google
       </Button>
-    </>
+    </div>
   );
 }
