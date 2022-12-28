@@ -25,6 +25,7 @@ export default function Post({ post, setPhotoList }) {
   };
   return (
     <Card
+      className="card"
       hoverable
       actions={[<Heart />]}
       cover={<img alt={post.description} src={post.photo} />}
