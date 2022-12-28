@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
-import { Modal, Form, Input, Button, Upload } from "antd";
+import { Modal, Form, Input, Button, Upload, Select } from "antd";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBcm7LwmgXHX-2LnWzaybUzuUy1GsjN5l8",
@@ -47,9 +47,15 @@ export default function UploadModal({ setShowUpload, setPhotoList }) {
         <Form.Item label="User Name" name="username">
           <Input required />
         </Form.Item>
-        {/* <Form.Item label="Profile Picture URL" name="profilePic">
-          {/* <Input required /> */}
-        {/* </Form.Item> */}
+        <Form.Item label="Avatar" name="avatar">
+          <Select>
+            <Select.Option value="🐬">Dolphin → 🐬</Select.Option>
+            <Select.Option value="🦊">Fox → 🦊</Select.Option>
+            <Select.Option value="🐨">Koala → 🐨</Select.Option>
+            <Select.Option value="🐸">Frog → 🐸</Select.Option>
+            <Select.Option value="🦁">Lion → 🦁</Select.Option>
+          </Select>
+        </Form.Item>
         <Form.Item label="Photo" name="photo">
           <Upload listType="picture-card">
             +<br />
