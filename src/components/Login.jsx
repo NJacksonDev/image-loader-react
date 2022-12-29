@@ -3,12 +3,12 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { Button } from "antd";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBcm7LwmgXHX-2LnWzaybUzuUy1GsjN5l8",
-  authDomain: "upload-storage-nj.firebaseapp.com",
-  projectId: "upload-storage-nj",
-  storageBucket: "upload-storage-nj.appspot.com",
-  messagingSenderId: "470398372734",
-  appId: "1:470398372734:web:f94220590546776878412f",
+  apiKey: "AIzaSyC3axfbGmwFpFKpkyBqgCr2TRlN__yTolA",
+  authDomain: "image-loader-nj.firebaseapp.com",
+  projectId: "image-loader-nj",
+  storageBucket: "image-loader-nj.appspot.com",
+  messagingSenderId: "260378560798",
+  appId: "1:260378560798:web:6e6d79937f48363133610f",
 };
 
 export default function Login({ setUser }) {
