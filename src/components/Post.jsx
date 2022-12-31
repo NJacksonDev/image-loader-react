@@ -3,7 +3,7 @@ import { HeartTwoTone } from "@ant-design/icons";
 
 export default function Post({ post, setPhotoList }) {
   const handleLikeClick = () => {
-    fetch(`${process.env.REACT_APP_ENDPOINT}/photos/${post.photoId}`, {
+    fetch(`${process.env.REACT_APP_ENDPOINT}/${post.photoId}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
     })

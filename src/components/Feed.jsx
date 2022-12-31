@@ -8,7 +8,7 @@ export default function Feed({ setUser }) {
   const [photoList, setPhotoList] = useState();
   const [showUpload, setShowUpload] = useState(false);
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_ENDPOINT}/photos`)
+    fetch(process.env.REACT_APP_ENDPOINT)
       .then((results) => results.json())
       .then((data) => setPhotoList(data))
       .catch(alert);
