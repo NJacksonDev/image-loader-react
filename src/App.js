@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [user, setUser] = useState();
   useEffect(() => {
-    const _user = sessionStorage.getItem("user");
+    const _user = localStorage.getItem("user");
     if (_user !== "") {
       setUser(_user);
     }
