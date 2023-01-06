@@ -18,6 +18,7 @@ export default function Login({ setUser }) {
     const provider = new GoogleAuthProvider();
     const response = await signInWithPopup(auth, provider).catch(alert);
     setUser(response.user);
+    sessionStorage.setItem("user", JSON.stringify(response.user));
   };
   return (
     <div className="login">

@@ -1,10 +1,16 @@
 import "./App.css";
 import Feed from "./components/Feed";
 import Login from "./components/Login";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
   const [user, setUser] = useState();
+  useEffect(() => {
+    const _user = sessionStorage.getItem("user");
+    if (_user !== "") {
+      setUser(_user);
+    }
+  }, []);
   return (
     <main className="App">
       <div className="App-header">
