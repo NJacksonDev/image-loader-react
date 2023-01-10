@@ -33,3 +33,7 @@ npm start
 ```
 
 To see the app running, go to **localhost:3000** using your web browser.
+
+## Acknowledgements
+
+ - [Freepik](https://www.freepik.com)
