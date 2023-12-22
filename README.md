@@ -5,10 +5,6 @@ Image Loader is a full-stack web application which allows users to upload an ima
 Technologies used: React, Node.js, Express, Firestore.
 
 
-## Live Version URL: 
-
-`https://image-loader-nj.web.app/`
-
 ## Screenshots of Application
 
 ![Screenshot 2022-12-30 at 9 40 33 PM](https://user-images.githubusercontent.com/12886956/210122705-f719b794-f189-421a-8884-28df63ad189e.png)
